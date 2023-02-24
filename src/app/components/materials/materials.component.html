@@ -1,0 +1,21 @@
+<table class="materials__table">
+    <thead class="materials__table-header">
+      <tr>
+        <th>Name</th>
+        <th>Cost</th>
+        <th>Green Cost</th>
+        <th>Quality</th>
+        <th>Shipping Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let material of materials">
+        <td>{{ material.name }}</td>
+        <td>{{ material.cost }}</td>
+        <td>{{ material.greenCost }}</td>
+        <td>{{ material.quality }}</td>
+        <td>{{ material.shippingDate | date : 'dd/MM/yy' }}</td>
+      </tr>
+    </tbody>
+  </table>
+

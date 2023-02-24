@@ -1,0 +1,33 @@
+.materials__table {
+    border-spacing:0;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.materials__table-header {
+    background-color: rgb(0, 0, 73);
+    color: white;
+    padding: 4vh;
+    border-radius: 8px;
+    height: 5vh;
+}
+
+
+table th:first-child{
+    border-radius:7px 0 0 0;
+  }
+  
+  table th:last-child{
+    border-radius:0 7px 0 0;
+  }
+
+ table td { 
+    padding: 1vh 3vh;
+    color: rgb(38, 38, 38);
+}
+
+tbody tr:nth-child(odd){
+    background-color: #f4f4f4;
+    color: #fff;
+  }
