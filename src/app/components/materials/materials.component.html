@@ -1,4 +1,6 @@
-<table class="materials__table">
+<div class="materials__container">
+  <h2 class="materials__title">Table</h2>
+  <table class="materials__table">
     <thead class="materials__table-header">
       <tr>
         <th>Name</th>
@@ -9,13 +11,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let material of materials">
-        <td>{{ material.name }}</td>
+      <tr *ngFor="let material of filteredMaterials">
+        <td>{{ material.label }}</td>
         <td>{{ material.cost }}</td>
-        <td>{{ material.greenCost }}</td>
+        <td>{{ material.greencost }}</td>
         <td>{{ material.quality }}</td>
-        <td>{{ material.shippingDate | date : 'dd/MM/yy' }}</td>
+        <td>{{ material.shippingdate | date : "dd/MM/yy" }}</td>
       </tr>
     </tbody>
   </table>
-
+</div>

@@ -1,16 +1,16 @@
 export interface Material {
-    id?: number; 
-    name: string;
-    cost: number;
-    greenCost: number; 
-    quality: string; 
-    supplier: object;
-    shippingDate: Date;
+  id?: number;
+  label: string;
+  cost: number;
+  greencost: number;
+  quality: string;
+  supplier: object;
+  shippingdate: Date;
 }
 
 export interface Supplier {
-    id?: number; 
-    name: string;
-    country: string; 
-    rating: string; 
+  id?: number;
+  label: string;
+  country: string;
+  rating: string;
 }

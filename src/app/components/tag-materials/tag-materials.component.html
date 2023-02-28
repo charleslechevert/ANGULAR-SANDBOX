@@ -1,0 +1,8 @@
+<div class="tags__container">
+  <div *ngFor="let filter of filters; let index = index" class="tag__container">
+    <p class="tag__name">{{ filter }}</p>
+    <button mat-icon-button (click)="deleteFilterClick(index)">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</div>
