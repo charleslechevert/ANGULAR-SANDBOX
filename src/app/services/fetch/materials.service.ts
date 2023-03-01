@@ -7,7 +7,7 @@ import { Material } from '../../Material';
   providedIn: 'root',
 })
 export class MaterialsService {
-  private apiUrl = 'http://localhost:5000/materials';
+  private apiUrl = 'http://localhost:4201/materials';
   materials: Material[] = [];
   filteredMaterials: Material[] = [];
 
@@ -15,8 +15,6 @@ export class MaterialsService {
     this.getMaterials().subscribe((materials: any) => {
       this.filteredMaterials = materials;
       this.materials = materials;
-      console.log(this.materials);
-      console.log(this.filteredMaterials);
     });
   }
 

@@ -1,0 +1,35 @@
+<div class="evolution__container">
+  <h2 class="evolution__title">Evolution</h2>
+  <p class="evolution__data-days">
+    Over the past {{ sortedData.spreadDays }} days
+  </p>
+  <div class="evolutuon__datas-container">
+    <div class="evolution__data-container">
+      <div class="evolution__title-container">
+        <p class="evolution__data-title">Cost</p>
+        <div class="evolution__colot-tag2"></div>
+      </div>
+      <div
+        class="evolution__number"
+        [ngStyle]="{ color: sortedData.costEvol <= 0 ? '#02490a' : '#b7191c' }"
+      >
+        {{ sortedData.costEvol | percent }}
+      </div>
+    </div>
+
+    <div class="evolution__data-container">
+      <div class="evolution__title-container">
+        <p class="evolution__data-title">Green Cost</p>
+        <div class="evolution__colot-tag1"></div>
+      </div>
+      <div
+        class="evolution__number"
+        [ngStyle]="{
+          color: sortedData.greenCostEvol <= 0 ? '#02490a' : '#b7191c'
+        }"
+      >
+        {{ sortedData.greenCostEvol | percent }}
+      </div>
+    </div>
+  </div>
+</div>

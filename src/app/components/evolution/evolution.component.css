@@ -1,0 +1,74 @@
+.evolution__container {
+  background-color: white;
+  height: 38vh;
+  width: 43vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 4px;
+  box-shadow: 2px 2px rgb(179, 179, 179);
+}
+
+.evolution__title {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  margin: 2vh;
+}
+
+.evolutuon__datas-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin: 2vh;
+}
+
+.evolution__data-container {
+  height: 20vh;
+  width: 30%;
+  border: 1px solid rgb(240, 239, 239);
+  border-radius: 5px;
+}
+
+.evolution__data-title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 2vh;
+}
+
+.evolution__colot-tag1 {
+  background-color: #53d196;
+  border-radius: 50%;
+  height: 2vh;
+  width: 2vh;
+}
+
+.evolution__colot-tag2 {
+  background-color: #02490a;
+  border-radius: 50%;
+  height: 2vh;
+  width: 2vh;
+}
+
+.evolution__title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.evolution__number {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 10%;
+}
+
+.evolution__data-days {
+  text-transform: uppercase;
+  font-size: 1rem;
+}

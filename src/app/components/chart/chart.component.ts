@@ -42,6 +42,14 @@ export class ChartComponent implements OnInit {
 
   arrangeData(data: any) {
     const sortedData: any = {};
+
+    this.filteredMaterials.sort((a: any, b: any) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+
+      return dateA.getTime() - dateB.getTime();
+    });
+
     sortedData.label = this.filters;
     sortedData.cost = this.filteredMaterials.map((item) => {
       return item.cost;
@@ -55,8 +63,6 @@ export class ChartComponent implements OnInit {
       moment(item.shippingdate).format('DD/MM/YYYY')
     );
 
-    console.log(this.filteredMaterials);
-
     return sortedData;
   }
 
@@ -64,8 +70,6 @@ export class ChartComponent implements OnInit {
     this.materialsService.dataEmitter.subscribe((value) => {
       this.filteredMaterials = value;
       const sortedData = this.arrangeData(this.filteredMaterials);
-      console.log(sortedData.cost);
-
       this.chart.destroy();
       this.chart = new Chart('myChart', {
         type: 'line',
@@ -75,15 +79,15 @@ export class ChartComponent implements OnInit {
             {
               label: 'Cost',
               data: sortedData.cost,
-              backgroundColor: '#53d196',
-              borderColor: '#53d196',
+              backgroundColor: '#02490a',
+              borderColor: '#02490a',
               borderWidth: 1,
             },
             {
               label: 'Green Cost',
-              data: [19, 12, 5, 3, 1, 6],
-              backgroundColor: '#02490a',
-              borderColor: '#02490a',
+              data: sortedData.greencost,
+              backgroundColor: '#53d196',
+              borderColor: '#53d196',
               borderWidth: 1,
             },
           ],
